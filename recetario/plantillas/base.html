@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+
+
+		</title>
+	</head>
+	<body>
+	<header>
+		{% block encabezado %}{% endblock %}
+		<nav>
+			<ul>
+				<li><a href="/">INICIO</a></li>
+				<li><a href="/usuarios">Usuarios registrados</a></li>
+				<li><a href="/recetas">Recetas</a></li>
+				<li><a href="/sobre">Sobre</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section class='contenido'>
+		{% block contenido %}{% endblock %}
+	</section>
+	<footer>
+		<p>Proyecto de ejemplo para el curso &copy;2012</p>
+	</footer>
+	</body>
+	</html>	

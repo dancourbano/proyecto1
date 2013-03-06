@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<style>
+		img {width:100px;}
+	</style>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="/">INICIO</a></li>
+				<li><a href="/usuarios">Usuarios registrados</a></li>
+				<li><a href="/recetas">Recetas</a></li>
+				<li><a href="/sobre">Sobre</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section>
+		<h1>NUestras recetas</h1>
+		<ul>
+			{% for dato in datos %}
+			<li>
+				<a href='/recetas/{{datos.id}}'>{{dato.titulo}}</a>
+				<img src='{{MEDIA_URL}}{{datos.imagen}}'>
+
+			</li>
+			{% endfor %}
+
+
+		</ul>
+
+
+	</section>
+
+</body>
+</html>

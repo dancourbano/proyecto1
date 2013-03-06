@@ -1,0 +1,22 @@
+{% extends base.html %}
+{% block titulo %} Usuarios registrados {% endblock %}
+{% block encabezado %} colaboradores {% endblock %}
+{% block contenido %}
+<ul>
+	{% for dato in usuarios %}
+	<li>{{dato.username|capfirst|}} - <em>{{dato.email}</em>
+		{% for item in recetas %}
+			{% if item.usuario==dato %}
+			<li>{{item}}</li>
+			{% endif %}
+		{% empty %}
+		<li>Este usuario no ha sido registrado</li>
+		{% endfor %}
+	</li>
+	{% empty %}
+	<li>No hay uusuarios registrados</li>
+	{% endfor%}
+
+
+</ul>
+{% endblock %}
